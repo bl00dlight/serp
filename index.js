@@ -68,7 +68,7 @@ async function buildOptions(params) {
     options.qs.hl = 'EN';
   }
 
-  options.browser = await chromium.launch({ headless: options.headless });
+  options.browser = await chromium.launch({ headless: options.headless, proxy: options.proxy });
 
   return options;
 }
